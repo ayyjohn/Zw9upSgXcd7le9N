@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Content Scraper
+A simple html scraper built in ruby on rails. Creates a short summary of an html page by using nokogiri to parse the DOM elements found by throwing out a get request to any URL and return all text contained in header tags.
 
-Things you may want to cover:
+## endpoints
+### /urls -- Get (index action)
+* displays all of the previously scraped URLs and a short summary
+  of their contents.
 
-* Ruby version
+### /urls -- Post (create action)
+* takes an input url, scans the HTML found on the page
+  and collects all text found within h1, h2, and h3
+  tags.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## libraries used
+* [Nokogiri](http://www.nokogiri.org/) for parsing raw HTML
