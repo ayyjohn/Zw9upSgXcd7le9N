@@ -1,0 +1,12 @@
+<ul>
+<% @urls.each do |url| %>
+    <li><%= url.url %>
+        <ul>
+            <li>
+                <%= url.content %>
+            </li>
+        </ul>
+    </li>
+    <% end %>
+</ul>
+
